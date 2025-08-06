@@ -15,24 +15,51 @@ Uma biblioteca completa de componentes React para criação de Landing Pages e P
 ```
 src/
 ├── components/
-│   ├── Headers/          # 4 variações de cabeçalhos
+│   ├── Headers/          # 8 variações de cabeçalhos
 │   │   ├── Header1/      # Header minimalista com menu sticky
 │   │   ├── Header2/      # Header escuro com efeitos visuais
 │   │   ├── Header3/      # Header com layout vertical
-│   │   └── Header4/      # Header em formato pill/cápsula
-│   ├── Forms/            # 3 tipos de formulários
+│   │   ├── Header4/      # Header em formato pill/cápsula
+│   │   ├── Header5/      # Header accordion responsivo
+│   │   ├── Header6/      # [Em desenvolvimento]
+│   │   ├── Header7/      # [Em desenvolvimento]
+│   │   └── Header8/      # [Em desenvolvimento]
+│   ├── About/            # 8 seções sobre mim
+│   │   ├── About1/       # Layout lado a lado com estatísticas
+│   │   ├── About2/       # Foco no texto com cards de skills
+│   │   ├── About3/       # Tema escuro com timeline
+│   │   ├── About4/       # Estilo hero com informações de contato
+│   │   ├── About5/       # Split layout com checklist de skills
+│   │   ├── About6/       # [Em desenvolvimento]
+│   │   ├── About7/       # [Em desenvolvimento]
+│   │   └── About8/       # [Em desenvolvimento]
+│   ├── Forms/            # 8 tipos de formulários
 │   │   ├── Form1/        # Formulário de contato básico
 │   │   ├── Form2/        # Formulário de orçamento completo
-│   │   └── Form3/        # Newsletter simples
-│   ├── Galleries/        # 3 estilos de galeria/portfólio
+│   │   ├── Form3/        # Newsletter simples
+│   │   ├── Form4/        # [Em desenvolvimento]
+│   │   ├── Form5/        # Formulário com ícones e tema escuro
+│   │   ├── Form6/        # [Em desenvolvimento]
+│   │   ├── Form7/        # [Em desenvolvimento]
+│   │   └── Form8/        # [Em desenvolvimento]
+│   ├── Galleries/        # 8 estilos de galeria/portfólio
 │   │   ├── Gallery1/     # Grid com filtros
 │   │   ├── Gallery2/     # Masonry com lightbox
-│   │   └── Gallery3/     # Bento box layout
-│   └── Footers/          # 4 variações de rodapés
+│   │   ├── Gallery3/     # Bento box layout
+│   │   ├── Gallery4/     # [Em desenvolvimento]
+│   │   ├── Gallery5/     # [Em desenvolvimento]
+│   │   ├── Gallery6/     # [Em desenvolvimento]
+│   │   ├── Gallery7/     # [Em desenvolvimento]
+│   │   └── Gallery8/     # [Em desenvolvimento]
+│   └── Footers/          # 8 variações de rodapés
 │       ├── Footer1/      # Footer completo com links
 │       ├── Footer2/      # Footer minimalista com CTA
 │       ├── Footer3/      # Footer criativo com grid social
-│       └── Footer4/      # Footer compacto horizontal
+│       ├── Footer4/      # Footer compacto horizontal
+│       ├── Footer5/      # [Em desenvolvimento]
+│       ├── Footer6/      # [Em desenvolvimento]
+│       ├── Footer7/      # [Em desenvolvimento]
+│       └── Footer8/      # [Em desenvolvimento]
 ```
 
 ## 🛠️ Tecnologias Utilizadas
