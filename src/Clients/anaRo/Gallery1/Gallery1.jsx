@@ -10,7 +10,7 @@ const Gallery1 = () => {
     {
       id: 1,
       title: 'Massagem Modeladora',
-      category: 'Massagem',
+      category: 'massagem',
       description: 'Melhora oxigenação dos tecidos, reduz celulite, edemas e flacidez.',
       image: '/imgs/massagem-1.jpg',
       tech: ['Massagem', 'Bem-estar']
@@ -18,7 +18,7 @@ const Gallery1 = () => {
     {
       id: 2,
       title: 'Massagem Relaxante',
-      category: 'Massagem',
+      category: 'massagem',
       description: 'Reduz estresse e ansiedade, fortalece o sistema imunológico, elimina toxinas e aumenta qualidade de vida.',
       image: '/imgs/massagem-2.jpg',
       tech: ['Massagem', 'Conforto']
@@ -26,7 +26,7 @@ const Gallery1 = () => {
     {
       id: 3,
       title: 'Drenagem linfática',
-      category: 'Drenagem',
+      category: 'drenagem',
       description: 'Reduz inchaço, melhora circulação, reduz celulite e edemas e é forte aliado no controle do lipedema.',
       image: '/imgs/massagem-3.jpg',
       tech: ['Drenagem']
@@ -34,7 +34,7 @@ const Gallery1 = () => {
     {
       id: 4,
       title: 'Massagens terapêutica',
-      category: 'Massagem',
+      category: 'massagem',
       description: 'Alívio das tensões e trata dores musculares.',
       image: '/imgs/massagem-4.jpg',
       tech: ['Massagens', 'Terapia']
@@ -42,7 +42,7 @@ const Gallery1 = () => {
     {
       id: 5,
       title: 'Drenagem Linfática pós operatório',
-      category: 'Drenagem',
+      category: 'drenagem',
       description: 'A drenagem linfática pós operatório auxilia a recuperação cirúrgica e acelera a cicatrização. Proporcionando um resultado mais satisfatório.',
       image: '/imgs/massagem-5.jpg',
       tech: ['Drenagem']
@@ -50,14 +50,14 @@ const Gallery1 = () => {
     {
       id: 6,
       title: 'ReiKi',
-      category: 'ReiKi',
+      category: 'reiKi',
       description: 'Transferência de energia vital do universo para o corpo. Promove sensações de paz bem estar e equilíbrio. Estimula a produção de serotonina e endorfina reduzindo dores crônicas e contribui para o aumento da autoestima.',
       image: '/imgs/massagem-6.jpg',
       tech: ['Drenagem', 'Linfática']
     }
   ];
 
-  const filters = ['all', 'Massagem', 'Drenagem', 'ReiKi'];
+  const filters = ['all', 'massagem', 'drenagem', 'reiKi'];
 
   const filteredProjects = activeFilter === 'all'
     ? projects
@@ -78,7 +78,7 @@ const Gallery1 = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <h2>Meu Portfólio</h2>
+          <h2>serviços prestados</h2>
         </motion.div>
 
         <motion.div

@@ -1,0 +1,123 @@
+.footer {
+  background: linear-gradient(135deg, #D2B48C 0%, #BC9A6A 100%);
+  padding: 4rem 0 2rem;
+  margin-top: 0;
+  border-top: none;
+  color: #5D4E37;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(93,78,55,0.2);
+}
+
+.left h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5D4E37;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.left p {
+  color: #8B7355;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email {
+  color: #F4A460;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #F4A460;
+  transition: all 0.3s ease;
+}
+
+.email:hover {
+  color: #D2691E;
+  border-bottom-color: #D2691E;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #F4A460 0%, #DEB887 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+  transform: translateY(-3px);
+}
+
+.scrollTop {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.scrollTop:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.bottom {
+  text-align: center;
+  color: #8B7355;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .left h3 {
+    font-size: 2rem;
+  }
+
+  .right {
+    align-items: center;
+  }
+}

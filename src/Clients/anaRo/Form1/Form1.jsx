@@ -19,16 +19,16 @@ const Form1 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const message = `Olá! Meu nome é ${formData.name}.%0A%0AEmail: ${formData.email}%0A%0AMensagem: ${formData.message}`;
     const whatsappUrl = `https://wa.me/54984174451?text=${message}`;
-    
+
     window.open(whatsappUrl, '_blank');
   };
 
   return (
     <motion.section
-      id="contact"
+      id="contato"
       className={styles.formSection}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -41,8 +41,8 @@ const Form1 = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <h2>Entre em Contato</h2>
-          <p>Vamos conversar sobre seu próximo projeto</p>
+          <h2>entre em contato</h2>
+          <p>Vamos marcar a nossa massagem?</p>
         </motion.div>
 
         <motion.form

@@ -12,7 +12,7 @@ const About1 = () => {
 
   return (
     <motion.section
-      id="about"
+      id="sobre"
       className={styles.about}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -38,7 +38,7 @@ const About1 = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <h2>Sobre a Profissional</h2>
+            <h2>sobre a profissional</h2>
             <p className={styles.description}>
               A AnaRo nasceu com o propósito de promover o equilíbrio entre corpo, mente e alma.
             </p>
