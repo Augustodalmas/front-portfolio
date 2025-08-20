@@ -8,7 +8,7 @@ const Logo = ({ variant = 'default', size = 'medium' }) => {
       className={`${styles.logo} ${styles[variant]} ${styles[size]}`}
       whileHover={{ scale: 1.05 }}
     >
-      <img src="/imgs/logo.png" alt="Logo" className={styles.logoImg} />
+      <img src="/imgs/logo-2.png" alt="Logo" className={styles.logoImg} />
     </motion.div>
   );
 };

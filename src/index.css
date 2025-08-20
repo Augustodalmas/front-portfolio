@@ -16,5 +16,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  background: #FFF8DC;
+  background: #ffffff;
+  line-height: 0;
+}
+
+section, header, footer {
+  display: block;
+  line-height: normal;
 }
