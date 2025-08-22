@@ -13,17 +13,6 @@ const Header7 = () => {
     >
       <div className={styles.container}>
         <div className={styles.content}>
-          <motion.a
-            href="https://github.com/Dalmas-Templates"
-            className={styles.logoSection}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-            whileHover={{ scale: 1.05 }}
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <Logo variant="light" size="large" />
-          </motion.a>
 
           <motion.nav
             className={styles.nav}

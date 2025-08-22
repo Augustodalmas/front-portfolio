@@ -7,15 +7,6 @@ const Gallery5 = () => {
 
   const images = [
     {
-      id: 1,
-      src: '/imgs/jobs.png',
-      category: 'Sistema',
-      title: 'Sistema Uminum System',
-      description: 'Plataforma onde é possivel cadastrar Projetos e Produtos para se ter uma base sólida de produtos.',
-      tech: 'Django • SQlite',
-      href: 'https://github.com/Augustodalmas/System-Uminum'
-    },
-    {
       id: 2,
       src: '/imgs/voleiAPP.jpg',
       category: 'Sistema',
