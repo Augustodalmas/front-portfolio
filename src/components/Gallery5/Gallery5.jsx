@@ -8,40 +8,40 @@ const Gallery5 = () => {
   const images = [
     {
       id: 2,
-      src: '/imgs/voleiAPP.jpg',
+      src: '/imgs/sharefin.png',
       category: 'Sistema',
-      title: 'Volei APP',
-      description: 'Sistema para organização de partidas de vôlei juntamente com um check-in.',
-      tech: 'Django • SQlite',
-      href: 'https://github.com/Augustodalmas/APP-VoleiAPP'
+      title: 'Sharefin',
+      description: 'Sistema para gerenciamento financeiro.',
+      tech: 'NodeJS • Supabase • TypeScript',
+      href: 'https://github.com/Augustodalmas/Docs-ShareFin'
     },
-    {
-      id: 3,
-      src: '/imgs/anaro.jpg',
-      category: 'LandingPage',
-      title: 'Landing Page - AnaRo',
-      description: 'Site responsivo com +40% aumento em conversões.',
-      tech: 'React • CSS3 • Framer Motion',
-      href: 'https://anaromassagens.vercel.app/'
-    },
-    {
-      id: 4,
-      src: '/imgs/amor-de-la-pet.jpg',
-      category: 'LandingPage',
-      title: 'Landing Page - Amor de la Pet',
-      description: 'Site responsivo para atrair novos clientes para o pet shop.',
-      tech: 'React • CSS3 • Framer Motion',
-      href: 'https://amor-de-la-pet.vercel.app/'
-    },
-    {
-      id: 5,
-      src: '/imgs/fakestore.jpg',
-      category: 'Sistema',
-      title: 'E-commerce Fakestore',
-      description: 'Projeto desenvolvido para compreender tecnologias da empresa.',
-      tech: 'React • Node.Js • Mongoose • Stripe',
-      href: 'https://github.com/Augustodalmas/API-Fakestore'
-    },
+    // {
+    //   id: 3,
+    //   src: '/imgs/anaro.jpg',
+    //   category: 'LandingPage',
+    //   title: 'Landing Page - AnaRo',
+    //   description: 'Site responsivo com +40% aumento em conversões.',
+    //   tech: 'React • CSS3 • Framer Motion',
+    //   href: 'https://anaromassagens.vercel.app/'
+    // },
+    // {
+    //   id: 4,
+    //   src: '/imgs/amor-de-la-pet.jpg',
+    //   category: 'LandingPage',
+    //   title: 'Landing Page - Amor de la Pet',
+    //   description: 'Site responsivo para atrair novos clientes para o pet shop.',
+    //   tech: 'React • CSS3 • Framer Motion',
+    //   href: 'https://amor-de-la-pet.vercel.app/'
+    // },
+    // {
+    //   id: 5,
+    //   src: '/imgs/fakestore.jpg',
+    //   category: 'Sistema',
+    //   title: 'E-commerce Fakestore',
+    //   description: 'Projeto desenvolvido para compreender tecnologias da empresa.',
+    //   tech: 'React • Node.Js • Mongoose • Stripe',
+    //   href: 'https://github.com/Augustodalmas/API-Fakestore'
+    // },
   ];
 
   const tabs = ['all', 'Sistema', 'LandingPage', 'API'];
