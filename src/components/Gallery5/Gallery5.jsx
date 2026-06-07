@@ -1,89 +1,155 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Gallery5.module.css';
+
+const projects = [
+  {
+    id: 1,
+    src: '/projetos/Dauth/tela-inicial.png',
+    category: 'Sistema',
+    title: 'Dauth',
+    description: 'Sistema completo de agendamento para salões de beleza — controle de clientes, profissionais, pacotes e financeiro.',
+    tech: ['React', 'Express.js', 'Supabase'],
+    href: 'https://dauth.com.br',
+  },
+  {
+    id: 2,
+    src: '/projetos/Sharefin/pagina-inicial.png',
+    category: 'Sistema',
+    title: 'Sharefin',
+    description: 'Plataforma de gerenciamento financeiro compartilhado entre grupos.',
+    tech: ['Node.js', 'Supabase', 'TypeScript'],
+    href: null,
+  },
+  {
+    id: 3,
+    src: '/projetos/Uminum/pagina-inicial.png',
+    category: 'LandingPage',
+    title: 'Uminum',
+    description: 'Site institucional moderno desenvolvido para empresa local.',
+    tech: ['React', 'Vite', 'Tailwind'],
+    href: 'https://uminum.com.br',
+  },
+  {
+    id: 4,
+    src: '/projetos/Uminum Node/pagina-inicial.png',
+    category: 'Sistema',
+    title: 'System Uminum',
+    description: 'Sistema interno de gerenciamento de jobs e projetos com filtragem avançada e CRUD completo.',
+    tech: ['Django', 'Python', 'Bootstrap', 'SQLite'],
+    href: null,
+  },
+  {
+    id: 5,
+    src: '/projetos/Cache/pagina-inicial.png',
+    category: 'API',
+    title: 'Cache em APIs',
+    description: 'Estudo prático do impacto de cache em APIs — redução de 1000 queries para 1 em cenários de alto volume.',
+    tech: ['Node.js', 'MongoDB', 'Docker'],
+    href: 'https://github.com/Augustodalmas/Cache-NodeJS-Memory',
+  },
+  {
+    id: 6,
+    src: '/projetos/RabbitMq/pagina-github.png',
+    category: 'API',
+    title: 'RabbitMQ + Resend',
+    description: 'Arquitetura de microsserviços com filas de mensagens — API Node.js publica eventos consumidos por worker Python para disparo de emails.',
+    tech: ['Node.js', 'Python', 'RabbitMQ', 'Docker'],
+    href: 'https://github.com/Augustodalmas/RabbitMQ-Resend',
+  },
+];
+
+const tabs = [
+  { key: 'all', label: 'Todos' },
+  { key: 'Sistema', label: 'Sistema' },
+  { key: 'LandingPage', label: 'Landing Page' },
+  { key: 'API', label: 'API' },
+];
 
 const Gallery5 = () => {
   const [activeTab, setActiveTab] = useState('all');
 
-  const images = [
-    {
-      id: 2,
-      src: '/imgs/sharefin.png',
-      category: 'Sistema',
-      title: 'Sharefin',
-      description: 'Sistema para gerenciamento financeiro.',
-      tech: 'NodeJS • Supabase • TypeScript',
-      href: 'https://github.com/Augustodalmas/Docs-ShareFin'
-    },
-    // {
-    //   id: 3,
-    //   src: '/imgs/anaro.jpg',
-    //   category: 'LandingPage',
-    //   title: 'Landing Page - AnaRo',
-    //   description: 'Site responsivo com +40% aumento em conversões.',
-    //   tech: 'React • CSS3 • Framer Motion',
-    //   href: 'https://anaromassagens.vercel.app/'
-    // },
-    // {
-    //   id: 4,
-    //   src: '/imgs/amor-de-la-pet.jpg',
-    //   category: 'LandingPage',
-    //   title: 'Landing Page - Amor de la Pet',
-    //   description: 'Site responsivo para atrair novos clientes para o pet shop.',
-    //   tech: 'React • CSS3 • Framer Motion',
-    //   href: 'https://amor-de-la-pet.vercel.app/'
-    // },
-    // {
-    //   id: 5,
-    //   src: '/imgs/fakestore.jpg',
-    //   category: 'Sistema',
-    //   title: 'E-commerce Fakestore',
-    //   description: 'Projeto desenvolvido para compreender tecnologias da empresa.',
-    //   tech: 'React • Node.Js • Mongoose • Stripe',
-    //   href: 'https://github.com/Augustodalmas/API-Fakestore'
-    // },
-  ];
-
-  const tabs = ['all', 'Sistema', 'LandingPage', 'API'];
-  const filteredImages = activeTab === 'all' ? images : images.filter(img => img.category === activeTab);
+  const filtered = activeTab === 'all'
+    ? projects
+    : projects.filter(p => p.category === activeTab);
 
   return (
-    <motion.section id="trabalhos" className={styles.gallery}>
+    <motion.section
+      id="trabalhos"
+      className={styles.gallery}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className={styles.container}>
-        <h2>Trabalhos realizados</h2>
+        <div className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>Portfólio</p>
+          <h2 className={styles.title}>Trabalhos <em>realizados</em></h2>
+        </div>
 
         <div className={styles.tabs}>
           {tabs.map(tab => (
             <button
-              key={tab}
-              className={`${styles.tab} ${activeTab === tab ? styles.active : ''}`}
-              onClick={() => setActiveTab(tab)}
+              key={tab.key}
+              className={`${styles.tab} ${activeTab === tab.key ? styles.active : ''}`}
+              onClick={() => setActiveTab(tab.key)}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab.label}
             </button>
           ))}
         </div>
 
         <div className={styles.grid}>
-          {filteredImages.map((image, index) => (
-            <motion.a
-              key={image.id}
-              href={image.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.item}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <img src={image.src} alt={image.title} />
-              <div className={styles.overlay}>
-                <h3>{image.title}</h3>
-                <p>{image.description}</p>
-                <span className={styles.tech}>{image.tech}</span>
-              </div>
-            </motion.a>
-          ))}
+          <AnimatePresence mode="popLayout">
+            {filtered.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className={styles.card}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ delay: index * 0.07, duration: 0.4 }}
+              >
+                <div className={styles.cardImage}>
+                  {project.src
+                    ? <img src={project.src} alt={project.title} />
+                    : <div className={styles.imagePlaceholder} />
+                  }
+                  {project.badge && (
+                    <span className={styles.badge}>{project.badge}</span>
+                  )}
+                </div>
+
+                <div className={styles.cardBody}>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.category}>{project.category}</span>
+                  </div>
+                  <h3 className={styles.cardTitle}>{project.title}</h3>
+                  <p className={styles.cardDesc}>{project.description}</p>
+                  <div className={styles.techList}>
+                    {project.tech.map(t => (
+                      <span key={t} className={styles.techTag}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+
+                {project.href && (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cardLink}
+                    aria-label={`Ver projeto ${project.title}`}
+                  >
+                    <span>Ver projeto</span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
     </motion.section>

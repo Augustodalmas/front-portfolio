@@ -1,13 +1,13 @@
 .about {
-  padding: 6rem 0;
-  background: #000;
-  color: #fff;
+  padding: 7rem 0;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .layout {
@@ -19,13 +19,13 @@
 
 .imageSection {
   position: sticky;
-  top: 2rem;
+  top: 5rem;
 }
 
 .imageContainer {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   margin: 0 auto;
 }
 
@@ -34,7 +34,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #333;
+  border: 3px solid var(--shell);
+  position: relative;
+  z-index: 1;
 }
 
 .imageBorder {
@@ -43,9 +45,10 @@
   left: -10px;
   right: -10px;
   bottom: -10px;
-  border: 2px solid #666;
+  border: 1px solid var(--shell-glow);
   border-radius: 50%;
   animation: rotate 20s linear infinite;
+  box-shadow: 0 0 24px var(--shell-glow);
 }
 
 @keyframes rotate {
@@ -54,39 +57,77 @@
 }
 
 .contentSection {
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--shell);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--shell);
 }
 
 .header h2 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+
+.header h2 em {
+  font-style: italic;
+  color: var(--shell);
 }
 
 .role {
-  font-size: 1.3rem;
-  color: #999;
-  margin-bottom: 3rem;
-  font-weight: 300;
+  font-size: 1rem;
+  color: var(--ink-faint);
+  margin-bottom: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .description {
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
+  border-left: 1px solid var(--line-strong);
+  padding-left: 1.5rem;
 }
 
 .description p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #ccc;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ink-dim);
+  margin-bottom: 1rem;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
 }
 
 .timeline h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
   margin-bottom: 2rem;
-  color: #fff;
 }
 
 .timelineList {
@@ -96,58 +137,68 @@
 .timelineList::before {
   content: '';
   position: absolute;
-  left: 60px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #333;
+  left: 62px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line-strong);
 }
 
 .timelineItem {
   display: flex;
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
 .timelineYear {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-  min-width: 60px;
-  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--shell);
+  min-width: 42px;
+  text-align: right;
+  padding-top: 2px;
   position: relative;
 }
 
 .timelineYear::after {
   content: '';
   position: absolute;
-  right: -1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background: #fff;
+  right: -1.6rem;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--shell);
   border-radius: 50%;
-  border: 3px solid #000;
+  box-shadow: 0 0 8px var(--shell-glow);
+}
+
+.timelineContent {
+  padding-left: 0.8rem;
 }
 
 .timelineContent h4 {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
 }
 
 .timelineContent p {
-  font-size: 0.95rem;
-  color: #999;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   .about {
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   .layout {
@@ -161,8 +212,8 @@
   }
 
   .imageContainer {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
 
   .contentSection {
@@ -170,23 +221,14 @@
   }
 
   .header h2 {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .role {
-    text-align: center;
+    font-size: 2.2rem;
   }
 
   .timelineList::before {
-    left: 50px;
+    left: 46px;
   }
 
   .timelineYear {
-    min-width: 50px;
-  }
-
-  .timelineYear::after {
-    right: -1.25rem;
+    min-width: 36px;
   }
 }

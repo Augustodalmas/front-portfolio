@@ -1,73 +1,80 @@
 .header {
-  background: #000;
-  color: #fff;
-  padding: 2rem 0;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7, 9, 11, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.content {
+  padding: 0 1.5rem;
+  height: 64px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 28px;
+  width: auto;
+}
+
 .nav {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
 }
 
 .navLink {
-  color: #fff;
+  color: var(--ink-dim);
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  position: relative;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.18s ease;
 }
 
-.navLink::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 0.3s ease;
-}
-
-.navLink:hover::after {
-  width: 100%;
+.navLink:hover {
+  color: var(--ink);
 }
 
 .ctaBtn {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: var(--shell);
+  color: #07090b;
+  border-radius: var(--r-pill);
+  font-size: 0.875rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: background 0.18s ease;
+  flex-shrink: 0;
 }
 
 .ctaBtn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+  background: #6FE5FF;
 }
 
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    gap: 1.5rem;
+    display: none;
   }
 }

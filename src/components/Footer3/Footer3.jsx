@@ -1,69 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiMail } from 'react-icons/fi';
-import Logo from '../Logo/Logo';
+import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import styles from './Footer3.module.css';
 
 const Footer3 = () => {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
     <motion.footer
       className={styles.footer}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
     >
       <div className={styles.container}>
-        <motion.div
-          className={styles.wave}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
-        />
-
-        <div className={styles.content}>
-          <motion.div
-            className={styles.brand}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <p>Transformando ideias em realidade digital</p>
-          </motion.div>
-
-          <motion.div
-            className={styles.social}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div className={styles.socialGrid}>
-              <a href="https://github.com/Augustodalmas" className={styles.socialLink}>
-                <FiGithub />
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/augustordalmas/" className={styles.socialLink}>
-                <FiLinkedin />
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://www.instagram.com/" className={styles.socialLink}>
-                <FiInstagram />
-                <span>Instagram</span>
-              </a>
+        <div className={styles.grid}>
+          <div className={styles.brand}>
+            <div className={styles.logoRow}>
+              <img src="/imgs/logo-dalmas-full.png" alt="Dalmas" className={styles.logo} />
             </div>
-          </motion.div>
+            <p className={styles.tagline}>
+              Devagar e sempre.<br />
+              <em>Software que dura.</em>
+            </p>
+          </div>
+
+          <div className={styles.col}>
+            <p className={styles.colTitle}>Navegação</p>
+            <a href="#sobre" className={styles.colLink}>Sobre</a>
+            <a href="#trabalhos" className={styles.colLink}>Trabalhos</a>
+            <a href="#contato" className={styles.colLink}>Contato</a>
+          </div>
+
+          <div className={styles.col}>
+            <p className={styles.colTitle}>Redes</p>
+            <a href="https://github.com/Augustodalmas" target="_blank" rel="noopener noreferrer" className={styles.colLink}>
+              <FiGithub /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/augustordalmas/" target="_blank" rel="noopener noreferrer" className={styles.colLink}>
+              <FiLinkedin /> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.colLink}>
+              <FiInstagram /> Instagram
+            </a>
+          </div>
         </div>
 
-        <motion.div
-          className={styles.bottom}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-          <div className={styles.line} />
-          <p>&copy; {currentYear} Dalmas Tech. Feito com paixão.</p>
-        </motion.div>
+        <div className={styles.bottom}>
+          <span className={styles.copy}>&copy; {year} Augusto Dalmas</span>
+          <span className={styles.copy}>Caxias do Sul, RS</span>
+        </div>
       </div>
     </motion.footer>
   );
