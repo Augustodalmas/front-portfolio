@@ -14,12 +14,12 @@ const projects = [
   },
   {
     id: 2,
-    src: '/projetos/Sharefin/pagina-inicial.png',
-    category: 'Sistema',
-    title: 'Sharefin',
-    description: 'Plataforma de gerenciamento financeiro compartilhado entre grupos.',
-    tech: ['Node.js', 'Supabase', 'TypeScript'],
-    href: null,
+    src: '/imgs/arquitetura.svg',
+    category: 'Dados',
+    title: 'CS2 Data Engineering',
+    description: 'Pipeline medalhão que extrai dados de partidas (.dem), processa via parsers Python, ingere na camada bronze e transforma com DBT até a camada analítica, disponibilizada por API.',
+    tech: ['Python', 'DBT', 'Docker', 'API'],
+    href: 'https://github.com/Augustodalmas/data-enginnering-cs2-stats',
   },
   {
     id: 3,
@@ -64,6 +64,7 @@ const tabs = [
   { key: 'Sistema', label: 'Sistema' },
   { key: 'LandingPage', label: 'Landing Page' },
   { key: 'API', label: 'API' },
+  { key: 'Dados', label: 'Dados' },
 ];
 
 const Gallery5 = () => {
@@ -143,7 +144,7 @@ const Gallery5 = () => {
                   >
                     <span>Ver projeto</span>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </a>
                 )}

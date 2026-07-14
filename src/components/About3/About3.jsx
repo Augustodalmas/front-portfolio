@@ -16,6 +16,7 @@ const About3 = () => {
     { year: '2023', title: 'Python', desc: 'Início de aplicações em Python e Django.' },
     { year: '2025', title: 'Primeiro Estágio', desc: 'Início do estágio na área de desenvolvimento.' },
     { year: '2025', title: 'JavaScript', desc: 'APIs em Node.js e interfaces com React.' },
+    { year: '2026', title: 'Caminho de Dados', desc: 'Entrada na área de Dados — pipelines, engenharia de dados e transformação com DBT.' },
     { year: '2026', title: 'Infraestrutura Cloud', desc: 'Especialização em AWS — arquitetura, deploy e escalabilidade de aplicações na nuvem.' },
   ];
 
